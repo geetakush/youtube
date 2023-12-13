@@ -1,0 +1,62 @@
+/* 
+.card{
+    height: 500px;
+      width: 1000px;
+    box-shadow: 10px 5px 10px 5px;
+    border: 2px solid;
+  
+    
+ align-items: center;
+ margin-left: 20px;
+
+
+}
+.cardmain{
+  height: 500px;
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+
+ justify-content: center;
+ align-items: center;
+}
+.card1{
+  height: 300px;
+  width: 300px;
+  border: 2px solid blue;
+} */
+
+
+.carousel-caption .right h5 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: black;
+  height: 30%;
+  
+
+
+}
+.carousel-caption .right p{
+  width: 80%;
+  height: 40%;
+  font-size: 18px;
+  
+  
+
+}
+.carousel-caption  .right {
+  text-align: start;
+  border: 1px solid red;
+  margin-top: -34%;
+  height: 50%;
+  width: 100%;
+  padding: 15px;
+
+
+}
+
+
+
+

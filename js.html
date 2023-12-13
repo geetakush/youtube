@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        .rect{
+            height: 40%;
+            width: 30%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+         border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>geeta</h1>
+    <div id="red" style="    width: 328px;
+    height: 310px;
+    border: 2px solid green;
+    border-radius: 50%;margin: 43px;">text</div>
+    <button class="on"style="background-color: blue;    margin-left: 170px;" >on</button> -->
+
+<div class="rect">
+
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+    //       var n = document.querySelector("#red")
+    //     //   n.style.color ="red"
+    //     //   n.style.background ="red"
+
+    //   var a = document.querySelector(".on")
+    
+    //  flag=0
+   
+    // a.addEventListener("click" ,function(){
+    //     if(flag==0){
+          
+    //     n.style.background ="red"  
+    //     flag=1
+    //     }
+ 
+      
+    //    else{
+    //     n.style.background ="black" 
+
+    //    }
+        
+    // })
+
+//     var i=0
+//     while(i<8){
+//         i++
+//         console.log(i)
+//     }
+
+ 
+
+//      const abc=()=>{
+//         return 12;
+//      } 
+// console.log(abc());
+
+
+// var arr=[1,12,3,5,5];
+// arr.pop(3);
+// console.log(arr);
+ var text = document.querySelector(".rect");
+ text.addEventListener("mousemove",function(details){
+   var rectanglelocation = text.getBoundingClientRect( );
+    var  insidetherect= details.clientX-rectanglelocation.left;
+    console.log(insidetherect)
+    console.log(rectanglelocation)
+    if(insidetherect<rectanglelocation.width/2){
+        
+       var redcolor=gsap.utils.mapRange(0,rectanglelocation.width/2,255,0,insidetherect);
+       gsap.to(text,{
+        backgroundcolor:`rgb(${redcolor}, 0 , 0)`,
+        ease:Power4,
+       })
+
+    }else{
+      console.log("right")  
+    }
+});
+
+
+
+    </script>
+    </body>
+</html>
